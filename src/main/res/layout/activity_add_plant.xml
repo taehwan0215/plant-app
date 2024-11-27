@@ -1,0 +1,55 @@
+<!-- res/layout/activity_add_plant.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="새로운 식물 추가"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="16dp"/>
+
+    <!-- 첨부된 사진을 확인할 수 있는 공간 (상단에 표시될 이미지) -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_add"
+        android:contentDescription="첨부된 사진" />
+
+    <!-- 사진 선택 버튼 -->
+    <Button
+        android:id="@+id/selectPhotosButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="사진 선택"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#4CAF50"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="sans-serif-medium" />
+
+    <EditText
+        android:id="@+id/editTextNickname"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:hint="식물 닉네임 입력" />
+
+    <Button
+        android:id="@+id/buttonSavePlant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="추가"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#4CAF50"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="sans-serif-medium"/>
+</LinearLayout>
