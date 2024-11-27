@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 홈 바 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="71dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="게시판"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="375dp"
+            android:layout_height="64dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="39dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="알림 아이콘"
+            android:src="@drawable/ic_notifications" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="37dp"
+            android:contentDescription="프로필 아이콘"
+            android:src="@drawable/ic_profile" />
+    </LinearLayout>
+
+    <!-- 상단 탭 메뉴 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="#F5F5F5">
+
+        <TextView
+            android:id="@+id/tab_all"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="전체보기"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tab_pride"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="자랑할래요"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tab_question"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="질문있어요"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- RecyclerView: 게시글 목록 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp" />
+
+    <!-- 게시글 업로드 버튼: RecyclerView 위에 위치 -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_upload_post"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:contentDescription="게시글 업로드 버튼"
+        android:backgroundTint="#4CAF50"
+        android:elevation="8dp"
+        android:src="@drawable/ic_add" />
+</LinearLayout>
